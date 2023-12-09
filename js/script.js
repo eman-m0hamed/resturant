@@ -134,7 +134,7 @@ else{
 
 
 // slider
-let sliderImg =["../images/slide_1.jpg", "../images/slide_2.jpg", "../images/slide_3.jpg", "../images/res_img_5.jpg"];
+let sliderImg =["./images/slide_1.jpg", "./images/slide_2.jpg", "./images/slide_3.jpg", "./images/res_img_5.jpg"];
 
 let currentIndex = 0;
 let header = document.getElementById("main"),
@@ -160,3 +160,10 @@ function previous(){
 leftArrow.onclick = previous;
 
 rightArrow.onclick = next;
+
+$barIcon = document.querySelector("nav .bar-icon");
+$navLinksList = document.querySelector("nav ul");
+
+$barIcon.addEventListener("click", function(e){
+    $navLinksList.classList.toggle("show");
+})
